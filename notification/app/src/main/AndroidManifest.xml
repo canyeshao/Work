@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wing.notification.notificationtest" >
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <service
+            android:name=".DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name=".ImageActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/AppTheme"></activity>
+        <service
+            android:name=".MediaService"
+            android:enabled="true"
+            android:exported="false"></service>
     </application>
 
 </manifest>
